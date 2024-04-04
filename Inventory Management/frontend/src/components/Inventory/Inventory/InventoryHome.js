@@ -2,22 +2,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BudgetHome = () => {
+const InventoryHome = () => {
   return (
     <div>
       <h2>Welcome to Budget Home Page</h2>
       <div>
-        <Link to="/addpost">
-          <button>Add New Post</button>
+        <Link to="/addinventory">
+          <button>Add New </button>
         </Link>
       </div>
       <div>
-        <Link to="/posts">
-          <button>View Posts</button>
+        <Link to="/inventries">
+          <button>View the Inventory Details</button>
         </Link>
       </div>
     </div>
   );
 };
 
-export default BudgetHome;
+export default InventoryHome;

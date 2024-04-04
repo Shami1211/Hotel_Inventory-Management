@@ -5,24 +5,20 @@ const cors = require("cors");
 const app = express();
 
 //Routers
-const budget_router = require("./routes/budget-routes");
-const post_router = require("./routes/post-routes");
-const drive_router = require("./routes/drive-routes");
-const discount_router = require("./routes/discount-routes");
+
+const invetory_router = require("./routes/inventory-routes");
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
-app.use("/budgets", budget_router); // localhost:5000/budgets
-app.use("/posts", post_router); // localhost:5000/posts
-app.use("/drives", drive_router); // localhost:5000/drives
-app.use("/discounts", discount_router); // localhost:5000/drives
+
+app.use("/inventories", invetory_router); // localhost:5000/posts
 
 
 //5knLkTrtbu1yqFpR
 mongoose
   .connect(
-    "mongodb+srv://admin:5knLkTrtbu1yqFpR@budget.jslcg3f.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://admin:jiCG8f44dLD88zfS@cluster0.evmm97r.mongodb.net/"
   )
   .then(() => console.log("Connected To Database"))
   .then(() => {
