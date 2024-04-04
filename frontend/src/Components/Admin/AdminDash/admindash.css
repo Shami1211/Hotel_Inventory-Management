@@ -1,0 +1,116 @@
+.dis-fullbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  border: 0;
+  gap: 25px;
+}
+
+.discard_set_full {
+  padding: 20px 10%;
+}
+
+.dis_card_set_one {
+  background-color: #fff; /* Updated background color to white */
+  width: 300px;
+  border-radius: 10px; /* Increased border radius for a smoother look */
+  padding: 50px;
+  border: 2px solid #2db84c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
+  position: relative; /* Added positioning */
+  text-align: center;
+}
+
+.img_box_card {
+  width: 100%; /* Adjusted image width to fill the container */
+  height: 250px;
+  border-radius: 10px; /* Increased border radius for a smoother look */
+  object-fit: cover; /* Ensures the image covers the entire space */
+  margin-bottom: 15px; /* Added margin for bottom spacing */
+}
+
+.dis_detail_topic_main {
+  font-size: 24px; /* Adjusted main topic font size */
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 10px; /* Adjusted margin for top spacing */
+}
+
+.dis_detail_topic,
+.dis_detail_topic_sub {
+  font-size: 18px; /* Adjusted font size for details */
+  font-family: "Roboto", sans-serif;
+  text-align: start;
+  text-transform: capitalize;
+  margin-top: 5px; /* Adjusted margin for top spacing */
+  color: #333; /* Changed text color to a dark shade */
+}
+
+.dis_detail_topic_sub {
+  color: #666; /* Adjusted subtopic color for a lighter shade */
+}
+
+.dltbtn_dis {
+  background-color: #f10a0a;
+  border: 2px solid #f10a0a;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 16px; /* Adjusted button font size */
+  margin-top: 20px;
+  border-radius: 5px; /* Slightly increased border radius for the button */
+  cursor: pointer;
+  padding: 8px 20px; /* Increased button padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smoother hover effect */
+}
+
+.dltbtn_dis:hover {
+  background-color: #fff;
+  border: 2px solid #f10a0a;
+  color: #f10a0a;
+}
+
+.dis_button_container {
+  display: flex;
+  justify-content: space-between; /* Spread items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-top: 20px; /* Added margin for top spacing */
+}
+
+.add_to_cart_btn {
+  background-color: #2db84c; /* Button color */
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add_to_cart_btn:hover {
+  background-color: #249e3d; /* Hover color */
+}
+
+.add_to_cart_icon {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.dis_card_one {
+  
+  padding-right: 200px;
+  text-align: center;
+}
+.price {
+  text-decoration: line-through;
+  color: red; /* Optional: Change the color of the line-through text */
+}
