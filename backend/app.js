@@ -1,26 +1,22 @@
+// app.js
 const express = require("express");
-const mongoose = require("mongoose");
+const connectDB = require("./db/connect");
 const cors = require("cors");
 const app = express();
 
 // Routes
-const ItemRouter = require("./Routes/ItemRoute"); // Updated route import
+const ItemRouter = require("./Routes/ItemRoute");
 
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use("/items", ItemRouter); // Updated route path
+app.use("/items", ItemRouter);
 
 // DB connection
-mongoose
-  .connect("mongodb+srv://admin:jiCG8f44dLD88zfS@cluster0.evmm97r.mongodb.net/", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Connected to MongoDB"))
-  .then(() => {
-    app.listen(5000, () => {
-      console.log("Server is running on port 5000");
-    });
-  })
-  .catch((err) => console.log(err));
+connectDB(app); // Pass the app instance to connectDB
+
+// Start the server
+const PORT = process.env.PORT || 5000; // Use port 5000 instead of 8080
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
