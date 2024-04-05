@@ -1,13 +1,17 @@
-// Discount Model
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const discountSchema = new Schema({
+const itemSchema = new Schema({
   image: {
     type: String,
+    required: true,
   },
   name: {
+    type: String,
+    required: true,
+  },
+  category: {
     type: String,
     required: true,
   },
@@ -15,23 +19,19 @@ const discountSchema = new Schema({
     type: String,
     required: true,
   },
+  quantity: {
+    type: Number,
+    required: true,
+  },
   price: {
     type: Number,
     required: true,
   },
-  discount: {
-    type: Number,
-    required: true,
-  },
   total: Number, // Change to Number, remove 'required'
-  start: {
-    type: Date,
-    required: true,
-  },
-  end: {
+  date: {
     type: Date,
     required: true,
   },
 });
 
-module.exports = mongoose.model("Discount", discountSchema);
+module.exports = mongoose.model("Inventory", itemSchema);
